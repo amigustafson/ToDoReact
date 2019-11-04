@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import ReactDOM from "react-dom"
+import ToDoItem from "./ToDoItem"
+import todosData from "./todosData"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component{
+   constructor(){
+     super()
+     this.state={
+       todos: todosData
+
+     }
+   }
+  render(){
+    const toDoItems = this.state.todos.map(function(item){
+        return(
+       <ToDoItem key={item.id} item={item}/>)}
+    )
+    return(
+        <div >
+
+        <h1>TODO-LIST</h1>
+
+        <div className="frame">
+        {toDoItems}
+        </div>
+
+        </div>
+    )
+  }
 }
+
 
 export default App;

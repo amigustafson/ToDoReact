@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display|Nanum+Brush+Script&display=swap");
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +7,54 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #393e46;
+  text-align: center;
+}
+
+h1 {
+  color: #eeeeee;
+  font-family: 'DM Serif Display', serif;
+  font-size: 5rem;
+  text-shadow: 4px 4px 8px #222831;
+}
+
+p {
+  color: #eeeeee;
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 2rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.checkbox{
+  display: inline-block;
+
+  margin: 0 5% 5% 1%;
+}
+
+input.lg-checkbox{
+  transform: scale(2);
+}
+
+.todo{
+  display: inline-block;
+
+}
+
+.listItem{
+  border-bottom: solid 1px #eeee;
+  padding: 5%;
+}
+
+.frame{
+  text-align: left;
+  padding: 0 5% 2% 5%;
+  border: solid 5px #d65a31;
+  width: 20%;
+  margin: auto;
+  background-color: #222831;
+  box-shadow: 4px 4px 8px #222831;
 }
