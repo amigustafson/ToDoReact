@@ -32,10 +32,8 @@ class App extends React.Component{
 
   render(){
     //Create new array of the todoData and push through ToDoItem-component
-    const toDoItems = this.state.todos.map(function(item){
-        return(
-          <ToDoItem key={item.id} item={item} handleChange={this.handleChange}/>)}
-      )
+    const toDoItems = this.state.todos.map(item => {
+          return(<ToDoItem key={item.id} item={item} handleChange={this.handleChange}/>)})
     return(
         <div>
           <h1>TODO-LIST</h1>
